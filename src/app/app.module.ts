@@ -17,6 +17,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './state/app.reducer';
 import { UserEffects } from './state/store/user/effects';
 import { ContactsEditComponent } from './shared-components/contacts-edit/component/contacts-edit.component';
+import { UserReducer, reducer } from './state/store/user/reducers';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ContactsEditComponent } from './shared-components/contacts-edit/compone
     sharedComponents.ContactsComponent,
     sharedComponents.ContactsEditComponentPage,
     sharedComponents.ContactsEditComponent,
+    sharedComponents.ConfigComponent,
     UsersComponent,
     HomeComponent,
     ContactsEditComponent
@@ -34,7 +36,7 @@ import { ContactsEditComponent } from './shared-components/contacts-edit/compone
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    StoreModule.forRoot(reducers),
+    StoreModule.forRoot({User:reducer}),
     StoreDevtoolsModule.instrument({
       maxAge: 10
     }),

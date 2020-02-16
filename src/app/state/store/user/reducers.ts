@@ -1,5 +1,5 @@
 import * as userActions from './actions';
-import { createReducer, on } from '@ngrx/store';
+import { createReducer, on, Action } from '@ngrx/store';
 
 export interface State {
     users: {
@@ -21,3 +21,7 @@ export const UserReducer = createReducer(
         return newState;
     })
 );
+
+export function reducer(state: State | undefined, action: Action) {
+    return UserReducer(state, action);
+  }
