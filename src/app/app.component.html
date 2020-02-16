@@ -1,0 +1,21 @@
+
+<h1>Basic Example <span class="badge badge-secondary">NGRX</span></h1>
+<h5>Steps:</h5>
+<h6>1.Click in option -->Load users <-- in the nav bar</h6>
+<h6>2.Modify one user in edit</h6>
+<h6>3.Look at the magic in view</h6>
+<h6>PD: For more information check redux-dev-tools</h6>
+
+<ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="[ '/home' ]" routerLinkActive="[ '/home' ]">Edit</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="[ '/user' ]" routerLinkActive="[ '/user' ]">View</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="getUsers()">--> Load users <--</a>
+    </li>
+  </ul>
+
+<router-outlet></router-outlet>
