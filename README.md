@@ -1,5 +1,5 @@
 # NgrxBasic
-Check the project in this url: https://kevinmatamoros.github.io/NgrxBasic/user
+Check the project in this url: https://kevinmatamoros.github.io/NgrxBasic/
 
 Project to show up a very basic example about how work NGRX
 
